@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pau Speech Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="box">
+      <h1>Pau Speech Web</h1>
+      <p class="sub">Text to speech simple.</p>
+
+      <textarea id="text" maxlength="4096" placeholder="Tulis teks di sini..."></textarea>
+
+      <div class="row-between">
+        <span id="count">0 / 4096</span>
+        <button id="clearBtn" class="ghost">Clear</button>
+      </div>
+
+      <label>Voice</label>
+      <select id="voice">
+        <option value="alloy">Alloy</option>
+        <option value="ash">Ash</option>
+        <option value="coral">Coral</option>
+        <option value="echo">Echo</option>
+        <option value="fable">Fable</option>
+        <option value="nova">Nova</option>
+        <option value="onyx">Onyx</option>
+        <option value="sage">Sage</option>
+        <option value="shimmer">Shimmer</option>
+      </select>
+
+      <label>Speed: <span id="speedText">1.0x</span></label>
+      <input id="speed" type="range" min="0.5" max="2" step="0.1" value="1" />
+
+      <label>Style</label>
+      <input id="style" type="text" value="Speak clearly and naturally." />
+
+      <div class="buttons">
+        <button id="aiBtn">Generate AI MP3</button>
+        <button id="browserBtn" class="light">Browser Speech</button>
+      </div>
+
+      <div class="buttons three">
+        <button id="pauseBtn" class="light">Pause</button>
+        <button id="resumeBtn" class="light">Resume</button>
+        <button id="stopBtn" class="light">Stop</button>
+      </div>
+
+      <audio id="audio" controls></audio>
+
+      <a id="download" class="download hide" download="pau-speech.mp3">Download MP3</a>
+
+      <p id="status" class="status">Ready.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
