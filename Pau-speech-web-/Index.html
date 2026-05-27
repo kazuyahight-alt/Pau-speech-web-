@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pau Speech Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <header class="header">
+        <div>
+          <h1>Pau Speech Web</h1>
+          <p>Simple text to speech web.</p>
+        </div>
+        <span class="badge">TTS</span>
+      </header>
+
+      <label class="label" for="textInput">Text</label>
+      <textarea
+        id="textInput"
+        maxlength="4096"
+        placeholder="Tulis teks di sini..."
+      ></textarea>
+
+      <div class="meta">
+        <span id="charCount">0 / 4096</span>
+        <button id="clearBtn" class="link-btn" type="button">Clear</button>
+      </div>
+
+      <div class="grid">
+        <div>
+          <label class="label" for="voiceSelect">AI Voice</label>
+          <select id="voiceSelect">
+            <option value="alloy">Alloy</option>
+            <option value="ash">Ash</option>
+            <option value="ballad">Ballad</option>
+            <option value="coral">Coral</option>
+            <option value="echo">Echo</option>
+            <option value="fable">Fable</option>
+            <option value="nova">Nova</option>
+            <option value="onyx">Onyx</option>
+            <option value="sage">Sage</option>
+            <option value="shimmer">Shimmer</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="label" for="speedRange">Speed</label>
+          <div class="range-row">
+            <input id="speedRange" type="range" min="0.5" max="2" step="0.1" value="1" />
+            <span id="speedValue">1.0x</span>
+          </div>
+        </div>
+      </div>
+
+      <label class="label" for="styleInput">Style</label>
+      <input
+        id="styleInput"
+        type="text"
+        value="Speak clearly and naturally."
+        placeholder="Contoh: Speak calmly and clearly."
+      />
+
+      <div class="buttons">
+        <button id="aiBtn" class="primary" type="button">Generate AI MP3</button>
+        <button id="browserBtn" class="secondary" type="button">Speak Browser</button>
+      </div>
+
+      <div class="buttons small-buttons">
+        <button id="pauseBtn" class="secondary" type="button">Pause</button>
+        <button id="resumeBtn" class="secondary" type="button">Resume</button>
+        <button id="stopBtn" class="secondary" type="button">Stop</button>
+      </div>
+
+      <audio id="audioPlayer" controls></audio>
+
+      <a id="downloadLink" class="download hidden" download="pau-speech.mp3">
+        Download MP3
+      </a>
+
+      <p id="status" class="status">Ready.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
