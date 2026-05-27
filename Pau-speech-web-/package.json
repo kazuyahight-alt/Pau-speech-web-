@@ -1,0 +1,20 @@
+{
+  "name": "pau-speech-web",
+  "version": "1.0.0",
+  "description": "Simple text to speech web with browser speech and AI MP3 generation.",
+  "main": "index.html",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "keywords": [
+    "text-to-speech",
+    "tts",
+    "speech",
+    "vercel"
+  ],
+  "author": "Pau",
+  "license": "MIT"
+}
